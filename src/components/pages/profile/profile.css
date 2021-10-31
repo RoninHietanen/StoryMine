@@ -6,7 +6,7 @@
     padding-top: 1rem;
     padding-bottom: 1.5rem;
     width: 23rem;
-    top: 50%;
+    top: 54%;
     left: 58%;
     transform: translate(-50%, -50%);
     position: absolute;
@@ -23,7 +23,7 @@
     padding-top: 1rem;
     padding-bottom: 1.5rem;
     width: 23rem;
-    top: 50%;
+    top: 54%;
     left: 85%;
     transform: translate(-50%, -50%);
     position: absolute;
@@ -70,14 +70,14 @@
 @media screen and (max-width: 1500px) {
     .comments-card {
         width: 18rem;
-        top: 50%;
+        top: 54%;
         left: 51%;
         transform: translate(-50%, -50%);
     }
     
     .stories-card {
         width: 18rem;
-        top: 50%;
+        top: 54%;
         left: 83%;
         transform: translate(-50%, -50%);
     }
@@ -86,7 +86,7 @@
 @media screen and (max-width: 965px) {
     .comments-card {
         width: 12rem;
-        top: 50%;
+        top: 54%;
         left: 51%;
         transform: translate(-50%, -50%);
         
@@ -94,7 +94,7 @@
     
     .stories-card {
         width: 12rem;
-        top: 50%;
+        top: 54%;
         left: 83%;
         transform: translate(-50%, -50%);
     }
