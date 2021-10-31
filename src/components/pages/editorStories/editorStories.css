@@ -55,3 +55,10 @@
     transform: translate(-50%, -50%);
     position: absolute;
 }
+
+.story-input {
+    border: none;
+    width: 64vw;
+    height: 70vh;
+    background-color: rgb(199, 161, 130);
+}
