@@ -1,0 +1,30 @@
+.footer {
+    line-height: 1rem;
+    background-color: rgb(199, 161, 130);
+    color: rgb(0, 0, 0);
+    width: 100vw;
+    padding: 0.5rem;
+    position: fixed;
+    margin-bottom: -33px;
+    margin-left: -10px;
+    bottom: 0;
+    display: inline-block;
+}
+
+.footer-items {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.footer-item {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.contact-styling {
+    text-decoration: none;
+    color: black;
+}
