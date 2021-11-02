@@ -13,6 +13,7 @@
     border-radius: 9px;
     border: solid 1px rgba(0, 0, 0, 0.342);
     height: 35vh;
+    overflow-y: scroll;
 }
 
 .comments-card {
@@ -30,6 +31,7 @@
     border-radius: 9px;
     border: solid 1px rgba(0, 0, 0, 0.342);
     height: 70vh;
+    overflow-y: scroll;
 }
 
 .stories-card {
@@ -47,6 +49,7 @@
     border-radius: 9px;
     border: solid 1px rgba(0, 0, 0, 0.342);
     height: 70vh;
+    overflow-y: scroll;
 }
 
 .card-text {
@@ -130,4 +133,19 @@
     left: 26%;
     transform: translate(-50%, -50%);
     position: absolute;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(163, 121, 66);
+    border-radius: 15px;
 }
