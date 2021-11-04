@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
@@ -39,17 +39,15 @@ function Container () {
     return (
         <ApolloProvider client={client}>
             <Router>
-                <Switch>
-                    <div>
-                        <Route exact path="/" component={Homepage} />
-                        <Route exact path="/profile/id" component={Profile}/>
-                        <Route exact path="/search" component={Search}/>
-                        <Route exact path="/view/:id" component={View}/>
-                        <Route exact path="/edit/:id" component={Edit}/>
-                        <Route exact path="/signin" component={SignIn}/>
-                        <Route exact path="/signup" component={SignUp}/>
-                    </div>
-                </Switch>
+                <Routes>
+                    <Route exact path="/" component={Homepage} />
+                    <Route exact path="/profile/id" component={Profile}/>
+                    <Route exact path="/search" component={Search}/>
+                    <Route exact path="/view/:id" component={View}/>
+                    <Route exact path="/edit/:id" component={Edit}/>
+                    <Route exact path="/signin" component={SignIn}/>
+                    <Route exact path="/signup" component={SignUp}/>
+                </Routes>
             </Router>
         </ApolloProvider>
     );

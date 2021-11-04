@@ -1,7 +1,7 @@
 import React from 'react';
 import './navbar.css';
 import logo from './assets/images/logo.png';
-import Auth from "../../utils/auth";
+import Auth from "../utils/auth";
 import { Link } from "react-router-dom";
 
 function Navbar () {

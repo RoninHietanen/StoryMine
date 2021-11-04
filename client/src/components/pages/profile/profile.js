@@ -1,6 +1,9 @@
 import React from 'react';
 import './profile.css';
 
+import CommentCard from '../comment-card/commentcard';
+import StoryCard from '../story-card/storycard';
+
 function Profile () {
     return (
         <div>
@@ -31,7 +34,7 @@ function Profile () {
                     <h3>Comments</h3>
                 </div>
                 <div className="comment-card-content">
-                    
+                    <CommentCard />
                 </div>
             </div>
 
@@ -40,7 +43,7 @@ function Profile () {
                     <h3>Stories</h3>
                 </div>
                 <div className="story-card-content">
-                    
+                    <StoryCard />
                 </div>
             </div>
         </div>
