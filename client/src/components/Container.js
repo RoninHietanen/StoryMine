@@ -34,31 +34,15 @@ function Container () {
     return (
         <ApolloProvider client={client}>
             <Router>
-                <div>
-                    <Routes>
-                        <Route path="/">
-                            <Homepage />
-                        </Route>
-                        <Route path="/profile/id">
-                            <Profile />
-                        </Route>
-                        <Route path="/search">
-                            <Search />
-                        </Route>
-                        <Route path="/view/:id">
-                            <View />
-                        </Route>
-                        <Route path="/edit/:id">
-                            <Edit />
-                        </Route>
-                        <Route path="/signin">
-                            <SignIn />
-                        </Route>
-                        <Route path="/signup">
-                            <SignUp />
-                        </Route>
-                    </Routes>
-                </div>
+                <Routes>
+                    <Route exact path="/" element={<Homepage />}></Route>
+                    <Route exact path="/profile/id" element={<Profile />}></Route>
+                    <Route exact path="/search" element={<Search />}></Route>
+                    <Route exact path="/view/:id" element={<View />}></Route>
+                    <Route exact path="/edit/:id" element={<Edit />}></Route>
+                    <Route exact path="/signin" element={<SignIn />}></Route>
+                    <Route exact path="/signup" element={<SignUp />}></Route>
+                </Routes>
             </Router>
         </ApolloProvider>
     );

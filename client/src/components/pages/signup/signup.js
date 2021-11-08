@@ -5,7 +5,7 @@ import Auth from '../../../utils/auth';
 import './signup.css';
 
 function SignUp (props) {
-    const [formState, setFormState] = useState({ email: '', password: '' });
+    const [formState, setFormState] = useState({ email: '', password: '', username: '' });
     const [addUser] = useMutation(ADD_USER);
 
     const handleFormSubmit = async (event) => {
@@ -14,8 +14,7 @@ function SignUp (props) {
         variables: {
             email: formState.email,
             password: formState.password,
-            firstName: formState.firstName,
-            lastName: formState.lastName,
+            username: formState.username,
         },
         });
         const token = mutationResponse.data.addUser.token;
@@ -41,7 +40,7 @@ function SignUp (props) {
                         <input
                             placeholder="username"
                             name="username"
-                            type="firstName"
+                            type="username"
                             id="username"
                             className="input"
                             onChange={handleChange}
@@ -59,12 +58,12 @@ function SignUp (props) {
                         />
                     </div>
                     <div>
-                        <label className="label-h" htmlFor="pwd">Password:</label>
+                        <label className="label-h" htmlFor="password">Password:</label>
                         <input
                             placeholder="******"
                             name="password"
                             type="password"
-                            id="pwd"
+                            id="password"
                             className="p-input"
                             onChange={handleChange}
                         />
