@@ -3,6 +3,7 @@ import './signin.css';
 import { useMutation } from '@apollo/client';
 import { LOGIN } from '../../../utils/mutations';
 import Auth from '../../../utils/auth';
+import { Link } from "react-router-dom";
 
 function SignIn (props) {
     const [formState, setFormState] = useState({ email: '', password: '' });
@@ -62,8 +63,8 @@ function SignIn (props) {
                 </div>
                 ) : null}
                 <div className="buttons">
-                    <button className="signin-btn" type="submit">SignIn</button>
-                    <button className="signup-btn" type="submit">SignUp</button>
+                    <button className="signin-btn" type="submit"><Link to="/profile/id" className="text">SignIn</Link></button>
+                    <button className="signup-btn"><Link to="/signup" className="text">SignUp</Link></button>
                 </div>
             </form>
             </div>  
