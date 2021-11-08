@@ -22,6 +22,7 @@ const typeDefs = gql`
         username: String
         email: String
         password: String
+        description: String
         stories: [Story]!
         comments: [Comment]!
     }
@@ -36,7 +37,7 @@ const typeDefs = gql`
         story(storyId: ID!): Story
         comments: [Comment]!
         comment(commentId: ID!): Comment
-        user: User
+        user(userId: ID!): User
     }
 
     type Mutation {

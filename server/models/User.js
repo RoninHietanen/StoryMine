@@ -26,6 +26,9 @@ const userSchema = new Schema({
     avatar: {
         type: String,
     },
+    description: {
+        type: String
+    },
     userStories: [storySchema],
     userComments: [commentSchema],
 });
