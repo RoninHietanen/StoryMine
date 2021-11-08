@@ -27,25 +27,6 @@ Gitbash installed.
 
 MongoDB installed.
 
-## How to install
-
-*Instructions*
-```md
-1. Fork the repository
-2. Clone the repository to your computer
-3. Navigate into the StoryMine folder
-4. In the StoryMine folder use the following command `npm install`
-5. The next command will be `npm init -y`
-        if after completing this command you see: 
-          "dependencies": {
-
-          },
-        Skip to 11 otherwise continue from 6
-6. The next command will be `npm i [] --save`
-
-11. Then input the command `npm start` to start the local host.
-```
-
 ## Key Technologies Used
 
 **Node.js**
