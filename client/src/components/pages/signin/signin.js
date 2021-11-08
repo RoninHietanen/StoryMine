@@ -12,11 +12,12 @@ function SignIn (props) {
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         try {
-        const mutationResponse = await login({
-            variables: { email: formState.email, password: formState.password },
-        });
-        const token = mutationResponse.data.login.token;
-        Auth.login(token);
+            const mutationResponse = await login({
+                variables: { email: formState.email, password: formState.password },
+            });
+            const token = mutationResponse.data.login.token;
+            Auth.login(token);
+            console.log(token);
         } catch (e) {
         console.log(e);
         }
