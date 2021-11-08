@@ -5,7 +5,7 @@ import Auth from "../utils/auth";
 import { Link } from "react-router-dom";
 
 function Navbar () {
-    if (Auth.loggedIn()) {
+/*     if (Auth.loggedIn()) { */
         return (
             <nav className="navbar">
                 <div >
@@ -20,7 +20,7 @@ function Navbar () {
                 </div>
             </nav>
         );
-    } else {
+   /*  } else {
         return (
             <nav className="navbar">
                 <div >
@@ -29,7 +29,7 @@ function Navbar () {
 
             </nav>
         );
-    }
+    } */
 }
 
 export default Navbar;

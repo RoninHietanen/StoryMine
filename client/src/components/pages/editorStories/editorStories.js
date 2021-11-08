@@ -4,8 +4,8 @@ import './editorStories.css';
 function Edit () {
     return (
         <div>
-            {/* <button class="publish-btn" type="submit">Publish</button> */}
-            <button class="edit-btn" type="submit">Edit</button>
+            <button class="publish-btn" type="submit">Publish</button>
+            {/* <button class="edit-btn" type="submit">Edit</button> */}
             <div className="story-edit-box">
                 <form>
                     <input

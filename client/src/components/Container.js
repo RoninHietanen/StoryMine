@@ -36,7 +36,7 @@ function Container () {
             <Router>
                 <Routes>
                     <Route exact path="/" element={<Homepage />}></Route>
-                    <Route exact path="/profile/id" element={<Profile />}></Route>
+                    <Route exact path="/profile/:id" element={<Profile />}></Route>
                     <Route exact path="/search" element={<Search />}></Route>
                     <Route exact path="/view/:id" element={<View />}></Route>
                     <Route exact path="/edit/:id" element={<Edit />}></Route>
