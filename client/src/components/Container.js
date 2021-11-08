@@ -36,25 +36,25 @@ function Container () {
             <Router>
                 <div>
                     <Routes>
-                        <Route exact path="/">
+                        <Route path="/">
                             <Homepage />
                         </Route>
-                        <Route exact path="/profile/id">
+                        <Route path="/profile/id">
                             <Profile />
                         </Route>
-                        <Route exact path="/search">
+                        <Route path="/search">
                             <Search />
                         </Route>
-                        <Route exact path="/view/:id">
+                        <Route path="/view/:id">
                             <View />
                         </Route>
-                        <Route exact path="/edit/:id">
+                        <Route path="/edit/:id">
                             <Edit />
                         </Route>
-                        <Route exact path="/signin">
+                        <Route path="/signin">
                             <SignIn />
                         </Route>
-                        <Route exact path="/signup">
+                        <Route path="/signup">
                             <SignUp />
                         </Route>
                     </Routes>
