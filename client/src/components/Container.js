@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
@@ -40,29 +40,27 @@ function Container () {
         <ApolloProvider client={client}>
             <Router>
                 <Routes>
-                    <Switch>
-                        <Route exact path="/">
-                            <Homepage />
-                        </Route>
-                        <Route exact path="/profile/id">
-                            <Profile />
-                        </Route>
-                        <Route exact path="/search">
-                            <Search />
-                        </Route>
-                        <Route exact path="/view/:id">
-                            <View />
-                        </Route>
-                        <Route exact path="/edit/:id">
-                            <Edit />
-                        </Route>
-                        <Route exact path="/signin">
-                            <SignIn />
-                        </Route>
-                        <Route exact path="/signup">
-                            <SignUp />
-                        </Route>
-                    </Switch>
+                    <Route exact path="/">
+                        <Homepage />
+                    </Route>
+                    <Route exact path="/profile/id">
+                        <Profile />
+                    </Route>
+                    <Route exact path="/search">
+                        <Search />
+                    </Route>
+                    <Route exact path="/view/:id">
+                        <View />
+                    </Route>
+                    <Route exact path="/edit/:id">
+                        <Edit />
+                    </Route>
+                    <Route exact path="/signin">
+                        <SignIn />
+                    </Route>
+                    <Route exact path="/signup">
+                        <SignUp />
+                    </Route>
                 </Routes>
             </Router>
         </ApolloProvider>
