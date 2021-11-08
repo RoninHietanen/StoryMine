@@ -40,9 +40,9 @@ function Container () {
         <ApolloProvider client={client}>
             <Router>
                 <Routes>
-                    <Route exact path="/">
+                    {/* <Route exact path="/"> */}
                         <Homepage />
-                    </Route>
+                    {/* </Route>
                     <Route exact path="/profile/id">
                         <Profile />
                     </Route>
@@ -60,7 +60,7 @@ function Container () {
                     </Route>
                     <Route exact path="/signup">
                         <SignUp />
-                    </Route>
+                    </Route> */}
                 </Routes>
             </Router>
         </ApolloProvider>
