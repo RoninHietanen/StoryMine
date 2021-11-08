@@ -16,6 +16,12 @@ const resolvers = {
     },
     comment: async () => {
       return Comments.findOne({ _id: commentId });
+    },
+    users: async () => {
+      return User.find();
+    },
+    user: async () => {
+      return User.findOne({ _id: userId });
     }
   },
   Mutation: {
