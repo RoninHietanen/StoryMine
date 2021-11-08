@@ -35,27 +35,29 @@ function Container () {
         <div>
             <ApolloProvider client={client}>
                 <Router>
-                    <Route exact path="/">
-                        <Homepage />
-                    </Route>
-                    <Route exact path="/profile/id">
-                        <Profile />
-                    </Route>
-                    <Route exact path="/search">
-                        <Search />
-                    </Route>
-                    <Route exact path="/view/:id">
-                        <View />
-                    </Route>
-                    <Route exact path="/edit/:id">
-                        <Edit />
-                    </Route>
-                    <Route exact path="/signin">
-                        <SignIn />
-                    </Route>
-                    <Route exact path="/signup">
-                        <SignUp />
-                    </Route>
+                    <Routes>
+                        <Route exact path="/">
+                            <Homepage />
+                        </Route>
+                        <Route exact path="/profile/id">
+                            <Profile />
+                        </Route>
+                        <Route exact path="/search">
+                            <Search />
+                        </Route>
+                        <Route exact path="/view/:id">
+                            <View />
+                        </Route>
+                        <Route exact path="/edit/:id">
+                            <Edit />
+                        </Route>
+                        <Route exact path="/signin">
+                            <SignIn />
+                        </Route>
+                        <Route exact path="/signup">
+                            <SignUp />
+                        </Route>
+                    </Routes>
                 </Router>
             </ApolloProvider>
         </div>
