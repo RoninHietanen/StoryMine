@@ -34,8 +34,8 @@ function Container () {
     return (
         <ApolloProvider client={client}>
             <Router>
-                <Routes>
-                    <div>
+                <div>
+                    <Routes>
                         <Route exact path="/">
                             <Homepage />
                         </Route>
@@ -57,8 +57,8 @@ function Container () {
                         <Route exact path="/signup">
                             <SignUp />
                         </Route>
-                    </div>
-                </Routes>
+                    </Routes>
+                </div>
             </Router>
         </ApolloProvider>
     );
