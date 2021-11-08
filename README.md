@@ -2,7 +2,7 @@
 
 ## Link
 
-[Link to the Budget Tracker](https://radiant-thicket-51045.herokuapp.com/)
+[Link to the StoryMine](https://desolate-dusk-74098.herokuapp.com/)
 
 ## Description
 ```md
