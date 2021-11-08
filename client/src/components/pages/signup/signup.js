@@ -5,16 +5,16 @@ import Auth from '../../../utils/auth';
 import './signup.css';
 
 function SignUp (props) {
-    const [formState, setFormState] = useState({ email: '', password: '', username: '' });
+    const [formState, setFormState] = useState({ username: '' , email: '', password: ''});
     const [addUser] = useMutation(ADD_USER);
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         const mutationResponse = await addUser({
         variables: {
+            username: formState.username,
             email: formState.email,
             password: formState.password,
-            username: formState.username,
         },
         });
         const token = mutationResponse.data.addUser.token;

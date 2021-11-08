@@ -11,8 +11,8 @@ function Homepage () {
             <div className="card">
                 <div className="card-text">
                     <p>A place where you can share and create with others</p>
-                    <button className="signin-btn"><Link to="/signin">Sign In</Link></button>
-                    <button className="signup-btn"><Link to="/signup">Sign Up</Link></button>
+                    <button className="signin-btn"><Link to="/signin" className="text">Sign In</Link></button>
+                    <button className="signup-btn"><Link to="/signup" className="text">Sign Up</Link></button>
                 </div>
             </div>
         </div>
