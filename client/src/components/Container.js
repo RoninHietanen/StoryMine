@@ -1,11 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  createHttpLink,
-} from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
 import Homepage from './pages/homepage/homepage';
@@ -40,29 +35,27 @@ function Container () {
         <div>
             <ApolloProvider client={client}>
                 <Router>
-                    <Routes>
-                        <Route exact path="/">
-                            <Homepage />
-                        </Route>
-                        <Route exact path="/profile/id">
-                            <Profile />
-                        </Route>
-                        <Route exact path="/search">
-                            <Search />
-                        </Route>
-                        <Route exact path="/view/:id">
-                            <View />
-                        </Route>
-                        <Route exact path="/edit/:id">
-                            <Edit />
-                        </Route>
-                        <Route exact path="/signin">
-                            <SignIn />
-                        </Route>
-                        <Route exact path="/signup">
-                            <SignUp />
-                        </Route>
-                    </Routes>
+                    <Route exact path="/">
+                        <Homepage />
+                    </Route>
+                    <Route exact path="/profile/id">
+                        <Profile />
+                    </Route>
+                    <Route exact path="/search">
+                        <Search />
+                    </Route>
+                    <Route exact path="/view/:id">
+                        <View />
+                    </Route>
+                    <Route exact path="/edit/:id">
+                        <Edit />
+                    </Route>
+                    <Route exact path="/signin">
+                        <SignIn />
+                    </Route>
+                    <Route exact path="/signup">
+                        <SignUp />
+                    </Route>
                 </Router>
             </ApolloProvider>
         </div>
