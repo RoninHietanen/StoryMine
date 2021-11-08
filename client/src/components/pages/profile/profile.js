@@ -1,5 +1,6 @@
 import React from 'react';
 import './profile.css';
+import { Link } from "react-router-dom";
 
 import CommentCard from '../comment-card/commentcard';
 import StoryCard from '../story-card/storycard';
@@ -9,7 +10,7 @@ function Profile () {
         <div>
             <div>
                 <div>
-                    <button class="new-btn" type="submit">New Story</button>
+                    <button class="new-btn" type="submit"><Link to="/edit/:id">New Story</Link></button>
                     <button class="about-btn" type="submit">AboutMe</button>
                 </div>
                 <div className="about-card">
