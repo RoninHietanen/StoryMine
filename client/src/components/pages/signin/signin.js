@@ -64,7 +64,7 @@ function SignIn (props) {
                 </div>
                 ) : null}
                 <div className="buttons">
-                    <button className="signin-btn" type="submit"><Link to="/profile/id" className="text">SignIn</Link></button>
+                    <button className="signin-btn" type="submit"><Link to="/profile" className="text">SignIn</Link></button>
                     <button className="signup-btn"><Link to="/signup" className="text">SignUp</Link></button>
                 </div>
             </form>

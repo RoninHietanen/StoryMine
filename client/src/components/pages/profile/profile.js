@@ -10,7 +10,7 @@ function Profile () {
         <div>
             <div>
                 <div>
-                    <button class="new-btn" type="submit"><Link to="/edit/:id" className="text">New Story</Link></button>
+                    <button class="new-btn" type="submit"><Link to="/edit" className="text">New Story</Link></button>
                     <button class="about-btn" type="submit">AboutMe</button>
                 </div>
                 <div className="about-card">

@@ -14,9 +14,9 @@ function Navbar () {
 
                 
                 <div className="navbar-items">
-                    <h1 className="navbar-item button"><Link to="/profile/:id">Profile</Link></h1>
-                    <h1 className="navbar-item button"><Link to="/search">Search</Link></h1>
-                    <h1 className="navbar-item button"><a href="/" onClick={() => Auth.logout()}>Logout</a></h1>
+                    <h1 className="navbar-item button"><Link to="/profile" className="text">Profile</Link></h1>
+                    <h1 className="navbar-item button"><Link to="/search" className="text">Search</Link></h1>
+                    <h1 className="navbar-item button"><a href="/" onClick={() => Auth.logout()} className="text">Logout</a></h1>
                 </div>
             </nav>
         );
