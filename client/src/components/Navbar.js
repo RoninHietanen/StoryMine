@@ -26,7 +26,7 @@ function Navbar () {
                 <div >
                     <img className="logo" alt="StoryMine Logo" src={logo} />
                 </div>
-
+                
             </nav>
         );
     }

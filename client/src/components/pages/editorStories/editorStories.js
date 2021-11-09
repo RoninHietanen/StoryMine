@@ -1,10 +1,11 @@
 import React from 'react';
 import './editorStories.css';
+import { Link } from "react-router-dom";
 
 function Edit () {
     return (
         <div>
-            <button class="publish-btn" type="submit">Publish</button>
+            <button class="publish-btn" type="submit"><Link to="/view" className="text">Publish</Link></button>
             {/* <button class="edit-btn" type="submit">Edit</button> */}
             <div className="edit-box">
                 <div className="story-edit-head">
