@@ -3,22 +3,26 @@ import './viewerStories.css';
 
 import CommentCard from '../comment-card/commentcard';
 
-function View (stories) {
+function View ({stories}) {
+    console.log({stories});
     return (
         <div>
-            {stories && stories.map((story) => (
-                <div className="story-box">
-                    <div className="story-head">
-                        <h1 className="title" key={story._id}><span>{story.title}</span></h1>
+            <div className="story-box">
+                {stories && stories.map((story) => (
+                    
+                    <div>
+                        <div className="story-head">
+                            <h1 className="title" key={story._id}><span>{story.title}</span></h1>
+                        </div>
+                        <div className="story">
+                            <p>
+                                {story.storyText}
+                            </p>
+                        </div>
                     </div>
-                    <div className="story">
-                        <p>
-                            {story.storyText}
-                        </p>
-                    </div>
-
-                </div>
-            ))}
+                    
+                ))}
+            </div>
 
             <div className="add-comment-box">
                 <form>

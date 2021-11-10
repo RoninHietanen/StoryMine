@@ -57,7 +57,7 @@ const Edit = () => {
 
     return (
         <div>
-            <button class="publish-btn" type="submit"><Link to="/view" className="text">Publish</Link></button>
+            <button className="publish-btn" type="submit"><Link to="/view" className="text">Publish</Link></button>
             <div className="edit-box">
                 <div className="story-edit-head">
                     <form onSubmit={handleFormSubmit}>
