@@ -1,30 +1,81 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './editorStories.css';
 import { Link } from "react-router-dom";
+import { useMutation } from '@apollo/client';
 
-function Edit () {
+import { ADD_STORY } from '../../../utils/mutations';
+import { QUERY_STORIES } from '../../../utils/queries';
+
+const Edit = () => {
+
+    const [formState, setFormState] = useState({
+        title: '',
+        storyText: '',
+    });
+
+    const [addStory, {error}] = useMutation(ADD_STORY, {
+        update(cache, {data: { addStory }}) {
+            try {
+                const { stories } = cache.readQuery({ query: QUERY_STORIES });
+
+                cache.writeQuery({
+                    query: QUERY_STORIES,
+                    data: { stories: [addStory, ...stories] },
+                });
+            } catch (err) {
+                console.log(err);
+            }
+        },
+    });
+
+    const handleFormSubmit = async (event) => {
+        event.preventDefault();
+    
+        try {
+          const { data } = await addStory({
+            variables: { ...formState },
+          });
+    
+          setFormState({
+            title: '',
+            storyText: '',
+          });
+        } catch (err) {
+          console.error(err);
+        }
+    };
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+    
+        if (name === 'storyText') {
+          setFormState({ ...formState, [name]: value });
+        } else if (name !== 'storyText') {
+          setFormState({ ...formState, [name]: value });
+        }
+    };
+
     return (
         <div>
             <button class="publish-btn" type="submit"><Link to="/view" className="text">Publish</Link></button>
-            {/* <button class="edit-btn" type="submit">Edit</button> */}
             <div className="edit-box">
                 <div className="story-edit-head">
-                    <form>
+                    <form onSubmit={handleFormSubmit}>
                         <input
-                            type="text"
-                            id="title"
-                            name="tt"
+                            name="title"
+                            value={formState.title}
                             className="title-input"
+                            onChange={handleChange}
                         />
                     </form>
                 </div>
                 <div className="story-edit-box">
-                    <form>
+                    <form onSubmit={handleFormSubmit}>
                         <input
-                            type="text"
-                            id="story"
-                            name="st"
+                            name="storyText"
+                            value={formState.storyText}
                             className="story-input"
+                            onChange={handleChange}
                         />
                     </form>
                 </div>

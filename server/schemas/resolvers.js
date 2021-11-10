@@ -22,8 +22,8 @@ const resolvers = {
     }
   },
   Mutation: {
-    addStory: async (parent, { title, author, storyText  }) => {
-      return Stories.create({ title, author, storyText });
+    addStory: async (parent, { title, storyText  }) => {
+      return Stories.create({ title, storyText });
     },
     addComment: async (parent, { storyId, commentText, commentAuthor }) => {
       return Stories.findOneAndUpdate(

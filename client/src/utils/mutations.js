@@ -29,3 +29,18 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_STORY = gql`
+  mutation addThought($title: String!, $storyText: String!) {
+    addThought(title: $title, storyText: $storyText) {
+      _id
+      title
+      storyText
+      createdAt
+      comments {
+        _id
+        commentText
+      }
+    }
+  }
+`;
